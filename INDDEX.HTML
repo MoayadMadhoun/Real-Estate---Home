@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Find the perfect home for you with our real estate listings.">
+    <meta name="keywords" content="Real Estate, Homes, Buy, Sell, Rent">
+    <meta name="theme-color" content="#b22222">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="icon" href="./images/icon.jpg">
+    <title>Real Estate – Home</title>
+    <style>
+        body {
+            font-family:  'Trebuchet MS',sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+            font-weight: 400;
+        }
+        .hero{
+            background-image: url(./images/hp-hero-desktop-xl.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .active-link{
+            padding-bottom: 5px;
+            border-bottom:4px solid red;
+            padding-inline: 5px;
+        }
+        h2{
+            font-size: 24px;
+		        line-height: 32px;
+          }
+        .search-box{
+            max-width: 550px;
+          }
+        .search-btn{
+            position: relative;
+            right: 8%;
+            height: 40px ;
+            width: 40px;
+            padding: 5px;
+          }
+          .sign-up-icon{
+            min-height: 40px;
+            min-width: 40px;
+          }
+        @media (max-width: 568px) { 
+            .hide{
+                display: none;
+            }
+            .search-btn{
+            position: relative;
+            right: 9%;
+            }
+            .tablit-hide{
+                display:inline-block !important;
+            }
+            .sign-up-text{
+                display: none;
+            }
+        }
+        @media (max-width: 1000px) { 
+            .tablit-hide{
+                display: none;
+            }
+        }
+        @media (min-width: 568px ){
+            .sign-up-icon{
+                display: none;
+            }
+           
+        }
+        .listing-card__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            
+        }
+        .listing-card-img-wrap {
+        position: relative;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        }
+        /* Animation */
+        @keyframes slideFade {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        body{
+          transform: translateY(20px);
+          animation: slideFade 0.8s ease-out forwards;
+        }
+        .col {
+          transform: translateY(20px);
+          animation: slideFade 0.8s ease-out forwards;
+        }
+        .col[data-anim] {
+          animation-delay: calc(0.2s * var(--i));
+        }
+
+        .home-type::before { 
+          content: ''; 
+          position: absolute;
+          top: 0px; 
+          left: -15px;
+          height: 12.5px; 
+          width: 12.5px; 
+          background-color: #22b692;
+          border-radius: 5px;
+          margin-top: 5px;
+        }
+        .home-type{
+          margin-left: 15px;
+          position: relative;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container-fluid">
+        <!-- Start logo & login bar -->
+        <div class="row first-row justify-content-between bg-white">
+            <div class="col-6 my-auto px-5 d-flex justify-content-start">
+                <img src="./assets/imges/logo.jpg" height="30px">
+            </div>
+            <div class="col-6  d-flex justify-content-end pe-5">
+                <ul class="my-2 ">
+                    <li class="d-inline pe-2"><a class="hide text-decoration-none text-dark">Log in</a></li>
+                    <li class="d-inline pe-2">
+                        <span class="btn btn-danger rounded-5 sign-up-text">Sign up</span>
+                        <span class="sign-up-icon">
+                          <svg class="sign-up-icon rounded-circle my-auto btn btn-danger" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" data-testid="icon-user" viewBox="0 0 24 24" role="img" aria-label="User icon" focusable="false" style="display: inline-block;width: 1.5em;height: 1.5em;font-size: 32px;color: #BA68C8;fill: currentcolor;" width="18" height="18">
+                            <path d="M21.905 19.273c-.582-2.01-2.376-6.22-6.787-7.56 1.939-1.34 2.763-3.78 2.036-5.98A5.39 5.39 0 0012.015 2C9.64 2 7.555 3.483 6.828 5.732c-.727 2.201.097 4.641 2.036 5.98-4.993 1.293-6.447 5.695-6.835 7.8a1.98 1.98 0 00.484 1.675c.388.478.97.765 1.6.813H19.82a2.24 2.24 0 001.745-.813c.437-.527.534-1.244.34-1.914zM8.088 7.359c-.048-1.627.922-3.014 2.424-3.637a3.918 3.918 0 014.315.862c1.115 1.1 1.454 2.775.873 4.258a4.039 4.039 0 01-3.685 2.393c-2.181 0-3.927-1.77-3.927-3.876zm12.314 12.918a.694.694 0 01-.582.288H4.162c-.243 0-.437-.096-.534-.24-.145-.191-.193-.382-.145-.574.485-2.631 2.279-7.081 8.532-7.081 5.575 0 7.708 4.402 8.484 7.033.048.192 0 .383-.097.575z" fill="#FFFFFF"/>
+                          </svg>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End logo & login bar -->
+        <!-- Start landing bar -->
+        <div class="row secound-row hero text-light">
+            <h1 class="text-center mt-5">Discover your perfect home®</h1>
+            <p class="text-center mt-2">With the most complete source of homes for sale & real estate near you</p>
+            <ul class="my-2 ms-3 ms-md-0 text-center mb-3">
+                <li class="d-inline me-3 active-link"><a href="#" class="text-light text-decoration-none">BUY</a></li>
+                <li class="d-inline me-3"><a href="#" class="text-light text-decoration-none">RENT</a></li>
+                <li class="d-inline me-3"><a href="#" class="text-light text-decoration-none">SELL</a></li>
+                <li class="d-inline me-3"><a href="#" class="text-light text-decoration-none">PRE-APPROVAL</a></li>
+                <li class="d-inline me-3"><a href="#" class="text-light text-decoration-none hide">JUST SOLD</a></li>
+                <li class="d-inline me-3"><a href="#" class="text-light text-decoration-none hide">HOME VALUE</a></li>
+            </ul>
+            <div class="search-box mb-5 pb-5 mx-auto">
+                <form class="d-block" role="search">
+                  <div class="input-group input-group-lg ">
+                    <input type="search" class="form-control rounded-5 ms-5" placeholder="search" aria-label="" value="Greensboro, NC">
+                      <svg class="bg-danger rounded-circle my-auto search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" aria-hidden="true"> 
+                        <path fill="#ffffff" d="M459 434l-82-82c64-76 57-189-16-257-73-67-187-65-257 6-71 70-73 184-5 257 67 73 180 80 256 16l83 81c2 3 6 5 10 5s8-2 11-5c3-2 4-6 4-10s-1-8-4-11zm-223-47c-87 0-157-70-157-157S149 73 236 73c86 0 157 70 157 157s-70 157-157 157z"/>
+                      </svg>
+                  </div>
+                </form>
+            </div>
+        </div>
+        <!-- End landing bar -->
+        <!-- Start exhibits bar-->
+        <div class="row">
+            <div class="mt-5 d-block px-5 mx-2">
+                <h2 class="">Homes around $275,000</h2>
+                <a href="#" class="text-decoration-none">View all in Greensboro, NC</a>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3 my-3 mx-auto px-5 pb-5">
+                <!-- Card One -->
+                <div class="col">
+                  <article class="bg-white rounded-3 overflow-hidden shadow shadow-3">
+                    <div class="listing-card-img-wrap">
+                      <img src="./assets/imges/p1.webp" class="listing-card__img" alt="Single-Family Home at 1406 Ellis St">
+                      <svg class="position-absolute end-0 bottom-0 m-2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-testid="complex-svg-heart" focusable="false" height="40" viewBox="0 0 40 40" width="40" tabindex="-1" class="ComplexSvgHeart__StyledSvg-rui__rolw09-0 jTJcBx"><path d="M20 8.3c4.9-8 18.5-5.9 18.5 5l-.1 1.9c-.8 4.6-4 9.3-8.9 14a66.6 66.6 0 0 1-8.7 7l-.7.6-.8-.5a27.6 27.6 0 0 1-2.8-1.7c-2-1.4-4-3-6-4.7-5.6-5-9-10.3-9-15.8A10 10 0 0 1 20 8.3z" data-testid="complex-svg-heart-path" fill="#000000" stroke="#FFFFFF" stroke-width="3px" fill-opacity="0.4"/></svg>
+                    </div>
+                    <div class="ms-2 my-3">
+                      <div class="text-muted home-type">Single-Family Home</div>
+                      <div class="fw-bold fs-6">$325,000</div>
+                      <div>
+                        <span>5 bed </span>
+                        <span class="ms-2">3.5 bath </span>
+                        <span class="ms-2">0.38 acre lot</span>
+                      </div>
+                      <div>1406 Ellis St</div>
+                      <div class="text-muted">Greensboro, NC 27406</div>
+                    </div>
+                  </article>
+                </div>
+                <!-- Card Two -->
+                <div class="col">
+                    <article class="bg-white rounded-3 overflow-hidden shadow shadow-3">
+                      <div class="listing-card-img-wrap">
+                        <img src=".//assets/imges/p2.webp" class="listing-card__img" alt="Single-Family Home at 1406 Ellis St">                    
+                        <svg class="position-absolute end-0 bottom-0 m-2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-testid="complex-svg-heart" focusable="false" height="40" viewBox="0 0 40 40" width="40" tabindex="-1" class="ComplexSvgHeart__StyledSvg-rui__rolw09-0 jTJcBx"><path d="M20 8.3c4.9-8 18.5-5.9 18.5 5l-.1 1.9c-.8 4.6-4 9.3-8.9 14a66.6 66.6 0 0 1-8.7 7l-.7.6-.8-.5a27.6 27.6 0 0 1-2.8-1.7c-2-1.4-4-3-6-4.7-5.6-5-9-10.3-9-15.8A10 10 0 0 1 20 8.3z" data-testid="complex-svg-heart-path" fill="#000000" stroke="#FFFFFF" stroke-width="3px" fill-opacity="0.4"/></svg>
+                      </div>
+                      <div class="ms-2 my-3">
+                        <div class="text-muted home-type">Townhome</div>
+                        <div class="fw-bold fs-6">$287,941</div>
+                        <div>
+                          <span>3 bed </span>
+                          <span class="ms-2">2.5 bath </span>
+                          <span class="ms-2">3.920 sqft lot</span>
+                        </div>
+                        <div>935 Cannon Crossing Cir</div>
+                        <div class="text-muted">Greensboro, NC 27406</div>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- Card Three -->
+                  <div class="col">
+                    <article class="bg-white rounded-3 overflow-hidden shadow shadow-3">
+                      <div class="listing-card-img-wrap">
+                        <img src="./assets/imges/p3.webp" class="listing-card__img" alt="Single-Family Home at 1406 Ellis St">
+                        <svg class="position-absolute end-0 bottom-0 m-2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-testid="complex-svg-heart" focusable="false" height="40" viewBox="0 0 40 40" width="40" tabindex="-1" class="ComplexSvgHeart__StyledSvg-rui__rolw09-0 jTJcBx"><path d="M20 8.3c4.9-8 18.5-5.9 18.5 5l-.1 1.9c-.8 4.6-4 9.3-8.9 14a66.6 66.6 0 0 1-8.7 7l-.7.6-.8-.5a27.6 27.6 0 0 1-2.8-1.7c-2-1.4-4-3-6-4.7-5.6-5-9-10.3-9-15.8A10 10 0 0 1 20 8.3z" data-testid="complex-svg-heart-path" fill="#000000" stroke="#FFFFFF" stroke-width="3px" fill-opacity="0.4"/></svg>
+                      </div>
+                      <div class="ms-2 my-3">
+                        <div class="text-muted home-type">Single-Family Home</div>
+                        <div class="fw-bold fs-6">$225,000</div>
+                        <div>
+                          <span>3 bed </span>
+                          <span class="ms-2">2 bath </span>
+                          <span class="ms-2">0.25 acre lot</span>
+                        </div>
+                        <div>5 Acorn Ct</div>
+                        <div class="text-muted">Greensboro, NC 27406</div>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- Card Four -->
+                  <div class="col">
+                    <article class="bg-white rounded-3 overflow-hidden shadow shadow-3">
+                      <div class="listing-card-img-wrap">
+                        <img src="./assets/imges/p4.webp" class="listing-card__img" alt="Single-Family Home at 1406 Ellis St">
+                        <svg class="position-absolute end-0 bottom-0 m-2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-testid="complex-svg-heart" focusable="false" height="40" viewBox="0 0 40 40" width="40" tabindex="-1" class="ComplexSvgHeart__StyledSvg-rui__rolw09-0 jTJcBx"><path d="M20 8.3c4.9-8 18.5-5.9 18.5 5l-.1 1.9c-.8 4.6-4 9.3-8.9 14a66.6 66.6 0 0 1-8.7 7l-.7.6-.8-.5a27.6 27.6 0 0 1-2.8-1.7c-2-1.4-4-3-6-4.7-5.6-5-9-10.3-9-15.8A10 10 0 0 1 20 8.3z" data-testid="complex-svg-heart-path" fill="#000000" stroke="#FFFFFF" stroke-width="3px" fill-opacity="0.4"/></svg>
+                      </div>
+                      <div class="ms-2 my-3">
+                        <div class="text-muted home-type">Single-Family Home</div>
+                        <div class="fw-bold fs-6">$289,000</div>
+                        <div>
+                          <span>3 bed </span>
+                          <span class="ms-2">2 bath </span>
+                          <span class="ms-2">0.3 acre lot</span>
+                        </div>
+                        <div>3008 Stratford Dr</div>
+                        <div class="text-muted">Greensboro, NC 27406</div>
+                      </div>
+                    </article>
+                  </div>
+              </div>
+        <!-- End exhibits bar-->
+    </div>
+</body>
+</html>
